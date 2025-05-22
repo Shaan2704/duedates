@@ -1,0 +1,64 @@
+<header class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <div class="flex items-center space-x-2">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/assets/images/calogo.png" alt="My Logo" class="h-15 w-16" />
+        <div class="text-center">
+          <span style="font-family: 'Cooper Black', serif;" class="text-3xl font-bold bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">
+            S. S. CHAUHAN & COMPANY
+          </span>
+          <p class="mt-[1px] text-lg text-gray-600 dark:text-gray-400" style="font-family: 'Britannic Bold', serif;">
+            Chartered Accountants
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <!-- NAV MENU -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <!-- Home Dropdown -->
+      <div x-data="{ open: false }" class="relative" @mouseenter="open = true" @mouseleave="open = false">
+        <a href="/" class="text-sm font-medium hover:text-primary-600">Home</a>
+        <div x-show="open" class="absolute left-0 mt-2 w-48 bg-white" x-transition>
+          <a href="/about/" class="block px-4 py-2 text-sm hover:bg-gray-100">About Us</a>
+          <a href="#team" class="block px-4 py-2 text-sm hover:bg-gray-100">Team</a>
+        </div>
+      </div>
+
+      <!-- Downloads Dropdown -->
+      <div x-data="{ open: false }" class="relative" @mouseenter="open = true" @mouseleave="open = false">
+        <a href="/client-section/" class="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Client Section</a>
+        <div x-show="open" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50" x-transition>
+          <a href="/client-section/downloads/" class="block px-4 py-2 text-sm hover:bg-gray-100">Download Documents</a>
+          <a href="/client-section/submit-documents/" class="block px-4 py-2 text-sm hover:bg-gray-100">Submit Data</a>
+        </div>
+      </div>
+
+      <!-- Services Dropdown -->
+      <div x-data="{ open: false }" class="relative" @mouseenter="open = true" @mouseleave="open = false">
+        <a href="#" class="text-sm font-medium hover:text-primary-600 transition-colors">Services</a>
+        <div x-show="open" class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 z-50" x-transition>
+          <a href="#services" class="block px-4 py-2 text-sm hover:bg-gray-100">Overview</a>
+          <a href="#audit" class="block px-4 py-2 text-sm hover:bg-gray-100">Audit & Assurance</a>
+          <a href="#tax" class="block px-4 py-2 text-sm hover:bg-gray-100">Tax Advisory</a>
+          <a href="#advisory" class="block px-4 py-2 text-sm hover:bg-gray-100">Business Advisory</a>
+        </div>
+      </div>
+
+      <!-- Static Links -->
+      <a href="/careers" class="text-sm font-medium hover:text-primary-600 transition-colors">Careers</a>
+      <a href="https://instagram.com/shantanu.chauhan27" class="text-sm font-medium hover:text-primary-600 transition-colors">Contact</a>
+      <a href="/blog/" class="text-sm font-medium hover:text-primary-600 transition-colors">Blog</a>
+      <a href="#contact" class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors shadow-md hover:shadow-lg">Get Started</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden focus:outline-none" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>

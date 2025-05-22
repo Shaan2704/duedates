@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S. S. Chauhan & Company | Chartered Accountants</title>
+  <meta name="description" content="Premier chartered accounting firm specializing in audit, tax, and business advisory services with 7+ years of excellence.">
+
+  <!-- Preload and Fonts -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind & Alpine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body class="font-sans bg-light text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+  
+  <!-- Header -->
+ <div id="header"></div>
+
+  <!-- Hero Section with Full-Width Background Slider -->
+<section id="home" class="relative min-h-screen flex items-center justify-center px-6 pt-20 z-10 text-white">
+  <!-- Background Slider -->
+  <div class="absolute inset-0 z-0">
+    <div id="slider" class="w-full h-full relative">
+      <img src="/assets/images/fin/fin1.jpg?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" alt="Finance 1">
+      <img src="/assets/images/fin/fin2.jpg?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Finance 2">
+      <img src="/assets/images/fin/fin3.jpg?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Finance 3">
+      <img src="/assets/images/fin/fin4.jpg?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" alt="Finance 4">
+    </div>
+    <!-- Optional: Dark overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  </div>
+
+  <!-- Foreground Text -->
+  <div class="relative z-10 max-w-3xl text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" >
+      <span class="gradient-text">Professional Services</span><br>
+      With a Personal Touch
+    </h1>
+    <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto">
+      Trusted chartered accountants providing comprehensive financial solutions to help your business thrive in today's complex regulatory environment.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://wa.me/917389968331" class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+        Reach out on Whatsapp
+      </a>
+      <a href="#services" class="px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-primary-600 transition-all">
+        Our Services
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const images = document.querySelectorAll('#slider img');
+  let index = 0;
+
+  setInterval(() => {
+    images.forEach(img => {
+      img.classList.remove('opacity-100');
+      img.classList.add('opacity-0');
+    });
+    index = (index + 1) % images.length;
+    images[index].classList.remove('opacity-0');
+    images[index].classList.add('opacity-100');
+  }, 4000);
+</script>
+
+
+  <!-- Clients Logo Section -->
+  <section class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+        <img src="/assets/images/logo/cl1.png" alt="Client Logo" class="h-10 md:h-20">
+        <img src="/assets/images/logo/cl2.png" alt="Client Logo" class="h-10 md:h-10">
+        <img src="/assets/images/logo/cl3.png" alt="Client Logo" class="h-10 md:h-20">
+        <img src="/assets/images/logo/cl4.png" alt="Client Logo" class="h-10 md:h-20">
+        <img src="/assets/images/logo/cl5.png" alt="Client Logo" class="h-10 md:h-20">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+          <div class="relative">
+            <div class="w-full h-96 bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden">
+              <img src="/assets/images/fin/office.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                   alt="Our office" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 w-72">
+              <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">Our Mission</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                To provide reliable and forward-thinking financial solutions rooted in integrity, professionalism, and transparency—empowering our clients to grow with confidence and peace of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+          <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full mb-4">
+            About Us
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Trusted Financial Advisors Since <span class="gradient-text">2018</span>
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+            S. S. Chauhan & Company is a premier chartered accountancy firm with a team of experienced professionals dedicated to providing comprehensive financial solutions.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Industry Expertise</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  7+ years of experience across diverse industries and business sizes.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Client-Centric Approach</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  Personalized solutions tailored to your specific business needs.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Technological Edge</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  Leveraging cutting-edge tools for accurate and efficient service delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full mb-4">
+          What We Offer
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Comprehensive <span class="gradient-text">Financial Services</span>
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+          We provide end-to-end financial solutions to help your business navigate complex regulatory environments and achieve sustainable growth.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-primary-500 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1554224155-6721c8579a41?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                 alt="Audit Services" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Audit & Assurance</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Comprehensive audit services to ensure compliance and identify opportunities for improvement.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Statutory Audits
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Internal Audits
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Tax Audits
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-blue-500 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                 alt="Tax Services" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Tax Advisory</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Strategic tax planning and compliance services to optimize your tax position and minimize liabilities.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Corporate Tax Planning
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                GST Compliance
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                International Taxation
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 bg-indigo-500 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                 alt="Business Advisory" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="p-3 bg-indigo-100 dark:bg-indigo-900 rounded-lg mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Business Advisory</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Expert guidance to help you make informed financial decisions and drive business growth.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Financial Planning
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Risk Management
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Business Valuation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+          View All Services
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full mb-4">
+          Our Experts
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Meet Our <span class="gradient-text">Leadership Team</span>
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+          A team of seasoned professionals with diverse expertise to address all your financial needs.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- Team Member 1 -->
+<div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+  <!-- Top Image -->
+  <div class="h-80 bg-gray-200 dark:bg-gray-600 relative overflow-hidden flex justify-center">
+    <img src="assets/images/shantanu.jpg" alt="CA Shantanu Singh Chauhan" class="w-1/2 h-600 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 p-6">
+      <h3 class="text-xl font-bold text-white">CA Shantanu Singh Chauhan</h3>
+      <p class="text-primary-200">Founder</p>
+    </div>
+  </div>
+  <!-- Card Body -->
+  <div class="p-5">
+    <!-- Departments Section -->
+<div class="mb-4">
+  <div class="flex items-center space-x-2 mb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Taxation & GST</span>
+  </div>
+  <div class="flex items-center space-x-2 mb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Auditing and Assurance</span>
+  </div>
+  <div class="flex items-center space-x-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Financial Modelling</span>
+  </div>
+</div>
+
+    <!-- About Section -->
+    <p class="text-gray-600 dark:text-gray-300 mb-4">
+      Specializes in GST, indirect tax litigation, and advisory with a reputation for detailed analysis and business-friendly solutions.
+    </p>
+    <!-- Social Icons -->
+    <div class="flex space-x-4">
+      <a href="https://www.linkedin.com/in/shantanu-chauhan27" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+      <a href="https://x.com/chauhanss23" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Team Member 2 -->
+<div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+  <!-- Top Image -->
+  <div class="h-80 bg-gray-200 dark:bg-gray-600 relative overflow-hidden flex justify-center">
+    <img src="assets/images/siddharth.jpg" alt="CA Siddharth Nayak" class="w-1/2 h-600 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 p-6">
+      <h3 class="text-xl font-bold text-white">CA Siddharth Nayak</h3>
+      <p class="text-primary-200">Partner</p>
+    </div>
+  </div>
+  <!-- Card Body -->
+  <div class="p-5">
+    <!-- Departments Section -->
+<div class="mb-4">
+  <div class="flex items-center space-x-2 mb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Investment Strategy & Analysis</span>
+  </div>
+  <div class="flex items-center space-x-2 mb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Market Research & Insights</span>
+  </div>
+  <div class="flex items-center space-x-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="text-sm text-gray-600 dark:text-gray-400">Risk Management</span>
+  </div>
+</div>
+
+    <!-- About Section -->
+    <p class="text-gray-600 dark:text-gray-300 mb-4">
+      Specializes in stock market analysis, investment strategy, and portfolio management, with a reputation for delivering data-driven insights and tailored solutions that align with client financial goals.
+    </p>
+    <!-- Social Icons -->
+    <div class="flex space-x-4">
+      <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="clients" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full mb-4">
+          Client Voices
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          What Our <span class="gradient-text">Clients Say</span>
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+          Don't just take our word for it - here's what our clients have to say about working with us.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0 mr-4">
+              <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Client">
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-800 dark:text-white">Priya Sharma</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">CEO, TechSolutions</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "S. S. Chauhan & Company transformed our financial operations. Their tax planning strategies saved us 30% in liabilities last year alone."
+          </p>
+          <div class="flex text-yellow-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0 mr-4">
+              <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Client">
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-800 dark:text-white">Rahul Mehta</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Director, FinCorp Ltd.</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "Their team's expertise in GST compliance saved us from potential penalties. Proactive, professional, and always available when needed."
+          </p>
+          <div class="flex text-yellow-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0 mr-4">
+              <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Client">
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-800 dark:text-white">Ananya Patel</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Founder, StartupX</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "As a startup, their guidance on compliance and funding strategies was invaluable. More than accountants - true business partners."
+          </p>
+          <div class="flex text-yellow-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl md:text-5xl font-bold mb-2">7+</div>
+          <div class="text-sm md:text-base opacity-90">Years Experience</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+          <div class="text-sm md:text-base opacity-90">Happy Clients</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+          <div class="text-sm md:text-base opacity-90">Industry Awards</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400">
+          <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+          <div class="text-sm md:text-base opacity-90">Client Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-xl p-8 md:p-12" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-2/3 mb-8 md:mb-0">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Financial Strategy?</h2>
+            <p class="text-gray-600 dark:text-gray-300">
+              Schedule a free consultation with our experts to discuss how we can help your business thrive.
+            </p>
+          </div>
+          <div class="md:w-1/3 flex justify-center md:justify-end">
+            <a href="#contact" class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+              Get Started Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+          <span class="inline-block px-3 py-1 text-xs font-semibold bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full mb-4">
+            Get In Touch
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Let's Discuss Your <span class="gradient-text">Financial Needs</span>
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
+            Have questions about our services or want to discuss how we can help your business? Reach out to us using the form or contact details below.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Phone</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  <a href="tel:+917389968331" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">+91 73899 68331</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Email</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  <a href="mailto:cashantanu.schauhan@gmail.com" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">cashantanu.schauhan@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-800 dark:text-white">Office</h3>
+                <p class="mt-1 text-gray-600 dark:text-gray-400">
+                  78, Awadhpuri, Gwarighat, Jabalpur, Madhya Pradesh, India - 482008
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-all" placeholder="John Doe">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-all" placeholder="john@example.com">
+              </div>
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+              <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-all" placeholder="How can we help?">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white transition-all" placeholder="Your message..."></textarea>
+            </div>
+            <div>
+              <button type="submit" class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+<script>
+    fetch("/components/header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+  
+<script src="/assets/js/theme-toggle.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
